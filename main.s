@@ -1,5 +1,6 @@
 # Lucas Beluomini 120111
 # Gabriel Biscaia 110828
+# Vinicius Gondo  118939
 .section .data
 
     # definição de arquivos que vão ser lidos e escritos
