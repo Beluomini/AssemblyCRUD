@@ -1,5 +1,5 @@
+# Gabriel Biscaia 118928
 # Lucas Beluomini 120111
-# Gabriel Biscaia 110828
 # Vinicius Gondo  118939
 .section .data
 
@@ -7,15 +7,16 @@
     leitura:    .asciz  "arquivo1.txt"
     escrita:    .asciz  "arquivo2.txt"
 
-    abertura:	.asciz	"\nPrograma de CRUD de Imoveis\n"
-	msgMenuOp:	.asciz	"Menu de Opcoes\n<1> Relatorio de Registros\n<2> Consulta\n<3> Insercao\n<4> Remocao\n<5> Recuperar Cadastro\n<6> Gravar Cadastro\n<7> Sair\nDigite opcao => "
+    # definição das mensagens das funções
+    abertura:	    .asciz	"\nPrograma de CRUD de Imoveis\n"
+	msgMenuOp:	    .asciz	"MENU DE OPCOES\n<1> Relatorio de Registros\n<2> Consulta\n<3> Insercao\n<4> Remocao\n<5> Recuperar cadastro\n<6> Gravar cadastro\n<7> Sair\nDigite a opcao => "
 	msgRelatorio:	.asciz	"Relatorio de Registros\n"
     msgConsulta:	.asciz	"Consulta\n"
-    msgInsercao:	.asciz	"Insercao\n"
-    msgRemocao:	.asciz	"Remocao\n"
+    msgInsercao:	.asciz	"Insercao de registro de imovel\n"
+    msgRemocao:	    .asciz	"Remocao de registro de imovel\n"
     msgRecuperar:	.asciz	"Recuperar Cadastro\n"
-    msgGravar:	.asciz	"Gravar Cadastro\n"    
-    msgFim: 	.asciz 	"Programa finalizado\n"
+    msgGravar:	    .asciz	"Gravar Cadastro\n"    
+    msgFim: 	    .asciz 	"Programa finalizado\n"
     
     opcao:		.int	0
 	tipoNum:	.asciz  "%d"
@@ -42,14 +43,14 @@ _start:
 	call	printf
 	addl	$4, %esp
 	
-	call	menuOpcoes
+	call	_menuOpcoes
 
 	cmpl	$7, opcao
-	je	_fim
+	je	    _fim
 
-	call	trataOpcoes
+	call    _trataOpcoes
 	
-	jmp	_start
+	jmp     _start
 
 _fim:
 
@@ -60,7 +61,7 @@ _fim:
 	pushl 	$0
 	call 	exit
 
-menuOpcoes:
+_menuOpcoes:
 
 	pushl	$msgMenuOp
 	call	printf
@@ -73,7 +74,7 @@ menuOpcoes:
 
 	RET
 
-trataOpcoes:
+_trataOpcoes:
 
 	cmpl	$1, opcao
 	je	    _relatorioRegistros
