@@ -4,30 +4,30 @@
 .section .data
  
     #Definição dos valores da struct
-    NomeProprietario:         .space      21
-    TelefoneProprietario:     .int        0
-    TipoImovel:                .space      12
-    EnderecoImovel:            .space      20
-    NumQuartosSimples:         .int        0
-    NumQuartosSuite:           .int        0
-    Garagem:	 	      .space      3
-    MetragemTotal:             .int        0
-    ValorAluguel:              .int        0
-    Prox:                      .int        0
+    NomeProprietario:       .space      21
+    TelefoneProprietario:   .int        0
+    TipoImovel:             .space      12
+    EnderecoImovel:         .space      20
+    NumQuartosSimples:      .int        0
+    NumQuartosSuite:        .int        0
+    Garagem:                .space      3
+    MetragemTotal:          .int        0
+    ValorAluguel:           .int        0
+    Prox:                   .int        0
     
     #Nome e tamanho da struct
-    p_struct:                   .int       0
-    tam_struct:                .int        80
+    p_struct:   .int    0
+    tam_struct: .int    80
     
-    inicio:                     .int       0
-    fim:                        .int       0
+    inicio: .int    0
+    fim:    .int    0
     
-    primeiro:                   .int       0
+    primeiro:   .int       0
     
-    numQuartosConsulta:          .int      0
-    quartosTotais:               .int      0
-    numRegistros:                .int      0
-    telefoneParaRemover:		.int       0
+    numQuartosConsulta:     .int      0
+    quartosTotais:          .int      0
+    numRegistros:           .int      0
+    telefoneParaRemover:    .int      0
     
     tempInt: 		      .int        0
     format: .string "%s"  # formato para a função scanf
@@ -38,36 +38,36 @@
     escrita:    .asciz  "arquivo2.txt"
 
     # definição das mensagens das funções
-    abertura:	    .asciz	"\nPrograma de CRUD de Imoveis\n"
-	msgMenuOp:	    .asciz	"MENU DE OPCOES\n<1> Relatorio de Registros\n<2> Consulta\n<3> Insercao\n<4> Remocao\n<5> Recuperar cadastro\n<6> Gravar cadastro\n<7> Sair\nDigite a opcao => "
-	msgRelatorio:	.asciz	"Relatorio de Registros\n"
-    msgConsulta:	.asciz	"Consulta\n"
-    msgInsercao:	.asciz	"Insercao de registro de imovel"
-    msgRemocao:	    .asciz	"Remocao de registro de imovel\n"
-    msgRecuperar:	.asciz	"Recuperar Cadastro\n"
-    msgGravar:	    .asciz	"Gravar Cadastro\n"    
-    msgFim: 	    .asciz 	"Programa finalizado\n"
-    msgPedeTelefone: .asciz     "Telefone do proprietário -> "
-    msgPedeNome: .asciz     "Nome do proprietário -> "
-    msgPedeTipoImovel: .asciz     "Tipo de imovel -> "
-    msgPedeEnderecoImovel: .asciz  "Endereco do imovel -> "
-    msgPedeNumQuartoSimples: .asciz     "Numero de quartos simples -> "
-    msgPedeNumQuartoSuite: .asciz     "Numero de suites -> "
-    msgPedeGaragem: .asciz     "Garagem(sim ou nao) -> "
-    msgPedeMetragemTotal: .asciz     "Metragem total -> "
-    msgPedeValorAluguel: .asciz     "Valor de aluguel -> "
-    msgPedeQuartosConsulta: .asciz  "Número de quartos considerados na consulta -> "
-    msgPrintaTelefone: .string     "Telefone do proprietário -> %d\n"
-    msgPrintaNome: .string     "%s"
-    msgPrintaTipoImovel: .string    "%s"
-    msgPrintaEnderecoImovel: .string   "%s"
-    msgPrintaNumQuartoSimples: .asciz     "Numero de quartos simples -> %d\n"
-    msgPrintaNumQuartoSuite: .asciz     "Numero de suites -> %d\n"
-    msgPrintaGaragem: .string      "%s"
-    msgPrintaMetragemTotal: .asciz     "Metragem total -> %d\n"
-    msgPrintaValorAluguel: .asciz     "Valor de aluguel -> %d\n"
+    abertura:	            .asciz	    "\nPrograma de CRUD de Imoveis\n"
+	msgMenuOp:	            .asciz	    "MENU DE OPCOES\n<1> Relatorio de Registros\n<2> Consulta\n<3> Insercao\n<4> Remocao\n<5> Recuperar cadastro\n<6> Gravar cadastro\n<7> Sair\nDigite a opcao => "
+	msgRelatorio:	        .asciz	    "Relatorio de Registros\n"
+    msgConsulta:	        .asciz	    "Consulta\n"
+    msgInsercao:	        .asciz	    "Insercao de registro de imovel"
+    msgRemocao:	            .asciz	    "Remocao de registro de imovel\n"
+    msgRecuperar:	        .asciz	    "Recuperar Cadastro\n"
+    msgGravar:	            .asciz	    "Gravar Cadastro\n"    
+    msgFim: 	            .asciz 	    "Programa finalizado\n"
+    msgPedeTelefone:        .asciz      "Telefone do proprietário -> "
+    msgPedeNome:            .asciz      "Nome do proprietário -> "
+    msgPedeTipoImovel:      .asciz      "Tipo de imovel -> "
+    msgPedeEnderecoImovel:  .asciz      "Endereco do imovel -> "
+    msgPedeNumQuartoSimples:.asciz      "Numero de quartos simples -> "
+    msgPedeNumQuartoSuite:  .asciz      "Numero de suites -> "
+    msgPedeGaragem:         .asciz      "Garagem(sim ou nao) -> "
+    msgPedeMetragemTotal:   .asciz      "Metragem total -> "
+    msgPedeValorAluguel:    .asciz      "Valor de aluguel -> "
+    msgPedeQuartosConsulta: .asciz      "Número de quartos considerados na consulta -> "
+    msgPrintaTelefone:          .string     "Telefone do proprietário -> %d\n"
+    msgPrintaNome:              .string     "%s"
+    msgPrintaTipoImovel:        .string     "%s"
+    msgPrintaEnderecoImovel:    .string     "%s"
+    msgPrintaNumQuartoSimples:  .asciz      "Numero de quartos simples -> %d\n"
+    msgPrintaNumQuartoSuite:    .asciz      "Numero de suites -> %d\n"
+    msgPrintaGaragem:           .string     "%s"
+    msgPrintaMetragemTotal:     .asciz      "Metragem total -> %d\n"
+    msgPrintaValorAluguel:      .asciz      "Valor de aluguel -> %d\n"
     
-    $pedeNomeProprietario: .asciz "Insira o nome do proprietário: "
+    $pedeNomeProprietario: .asciz "Insira o nome do proprietário -> "
     
     opcao:		.int	0
     tipoNum:	.asciz    "%d"
@@ -199,8 +199,7 @@ _consulta: #Consulta todos os registros com determinado número de quartos(suite
     jmp _retornarDoPrint
     
     
-_printarConsulta:
-    #Printa telefone
+_printarConsulta: #Printa telefone
     
     pushl	%eax
     pushl 	%edx
@@ -277,7 +276,7 @@ _insercao:
     cmpl $0, primeiro
     je  _definePrimeiro #Se for o primeiro registro seta esse registro como inicio
     
-    _retorna1: #Label para retornar da função _definePrimeiro
+_retorna1: #Label para retornar da função _definePrimeiro
     
     movl  $1, primeiro
     
@@ -315,7 +314,6 @@ _insercao:
     movl  $21, %ecx
     cld
     rep movsb
-    
     
     #pede tipo de imóvel
     pushl       %edx
@@ -441,11 +439,13 @@ _insercao:
     RET
 
 _setaProx:#Função para setar o valor prox do registro anterior
+
 	movl p_struct, %edx
 	movl %eax,  76(%edx)
 	jmp _retorna0
 	
 _definePrimeiro: #Função para setar o primeiro registro como inicio
+
 	movl %edx, inicio
 	jmp _retorna1
 
@@ -475,7 +475,8 @@ _remocao: #Remoção usando como parâmetro o número de telefone
     RET
     
     
-    _LoopBuscaRem: #Loop para encontrar elemento a remover
+_LoopBuscaRem: #Loop para encontrar elemento a remover
+
     movl %edx, %ebx #salvando backup do registro anterior (para alterar o valor prox caso o valor atual seja excluído)
     movl 76(%edx), %edx #Itera para proximo registro
     movl 21(%edx), %ecx
@@ -490,6 +491,7 @@ _remocao: #Remoção usando como parâmetro o número de telefone
     RET
     
 _removerPrimeiro:#Quando a remoção ocorre no primeiro registro
+
 	movl  76(%edx), %eax
 	movl  %eax, inicio
 	
