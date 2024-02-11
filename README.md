@@ -1,4 +1,4 @@
-# Trabalho2-PIHS
+# Assembly CRUD
 <p>O progama a seguir é um trabalho da matéria "Programação Interface Hardware e Software" e tem como o objetivo implementar, em GNU Assembly 32 bits, um programa de *Controle de Cadastro de Imóveis para locação*</p>
 
 <p>Esse programa tem como função ser um CRUD relacionado a registro de imóveis, contendo as seguinte funcionalidades:</p>
@@ -36,7 +36,7 @@
 </ol>
 <br>
 
-<b>Alunos</b>
+<b>Autores</b>
 <ul>
   <li>Gabriel Biscaia   <table>118928</table></li>
   <li>Lucas Beluomini   <table>120111</table></li>
